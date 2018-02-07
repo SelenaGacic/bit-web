@@ -1,0 +1,38 @@
+body {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.f {
+    font-family:  "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+.s {
+    font-family: Georgia, Times, serif; 
+    font-style: oblique;
+}
+.t{
+    font-family: Arial, Verdana, sans-serif;
+}
+.m {
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "BioRhyme";
+    src: url(./Fontovi/BioRhymeExpanded-Bold.ttf);
+}
+.xx {
+    font-family: BioRhyme;
+}
+
+
+@font-face {
+    font-family: "Belicosa";
+    scr: url("https://fontshttps://fonts.gstatic.com/s/librebarcode39/v5/tsmYkcVN_FjeCmyWhRNQuJm_oOtUjC5ylz94bgAcf30.woff");
+}
+p {
+    font-family: Belicosa;
+}
