@@ -11,6 +11,49 @@ ul {
     float: right;
 }
 
-ul > li {
+ul>li {
     display: inline-block;
+}
+
+.listImage {
+    padding: 30px;
+    background: #ffbe00;
+    color: black;
+    width: 220px;
+    float: right;
+}
+
+.slike>div {
+    margin: 10px;
+    width: 300px;
+    float: left;
+}
+
+.thirdImage {
+    clear: left;
+}
+
+#firstIm {
+    width: 100%;
+}
+
+.slike {
+    width: 100%;
+}
+
+.whole {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.footer {
+    width: 1500px;
+    color: white;
+    background: darkblue;
+    margin: 50px auto;
+    height: 40px;
+    padding: 1px; 
+}
+.clear {
+    clear: both;
 }

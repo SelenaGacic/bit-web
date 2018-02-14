@@ -1,0 +1,10 @@
+body {
+    height: 2000px;
+    background-image: url(./adventure.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    color: red;
+}
