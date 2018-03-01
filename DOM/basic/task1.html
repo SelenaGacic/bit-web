@@ -1,0 +1,97 @@
+/*Create page containing only one button Toggle background color on button click*/
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        button {
+            padding: 10px;
+            border: black solid 1px;
+            border-radius: 10px;
+        }
+
+        .red {
+            background: red;
+            color: white;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .white {
+            background: wheat;
+            height: 250px;
+            padding: 20px;
+
+        }
+
+        .blue {
+            background: darkblue;
+            height: 250px;
+            padding: 20px;
+        }
+
+        #yellow {
+            background: yellow;
+            color:black;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blue">
+        <button class="red" onclick="changeBackground()">Toggle background</button>
+        <button id="yellow">Turn off</button>
+    </div>
+
+
+    <script>
+        // var btn = document.querySelector('button');
+        // btn.addEventListener("click", function (){
+
+        // })
+        //prvi nacin
+        // function changeBackground() {
+        //     if (document.querySelector('div').className === 'blue') {
+        //         document.querySelector('div').className = 'white';
+
+        //     } else {
+        //         document.querySelector('div').className = 'blue';
+
+        //     }
+        // }
+
+        function changeBackground() {
+            var div = document.querySelector('div');
+            if (div.classList.contains('blue')) {
+                div.classList.remove('blue');
+                div.classList.add('white');
+            } else {
+                div.classList.remove('white');
+                div.classList.add('blue');
+
+            }
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

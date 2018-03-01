@@ -1,0 +1,25 @@
+#first {
+    list-style-type: circle; 
+}
+
+#second {
+    list-style-type: square;
+}
+
+#third {
+    list-style-type: upper-alpha;
+}
+
+#fourth {
+    list-style-type: upper-roman;
+}
+#fifth {
+    width: 200px;
+    list-style-image: url(./zvezda.png);
+}
+
+#sixth {
+    width: 200px;
+    list-style-image: url(./zvezda.png);
+    list-style-position: inside;
+}
