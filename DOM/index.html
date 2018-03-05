@@ -1,0 +1,67 @@
+<!-- Create page containing gallery
+Gallery contains six pictures
+At least one of the pictures should have width of 300px
+
+User can click on image and in that moment image will get 1px red border
+
+If Image width is not 300px event propagation should be stopped!
+
+Register event listener on document object, which listen for clicks
+When click occurs it should print in console on which element user clicked -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .lastImg {
+            width: 300px;
+        }
+
+        .redBorder {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNh6K8kjBSaLwzCmaGHb2HFREfIQR6THrneqDc20mtJHUIXBdkeQ" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNh6K8kjBSaLwzCmaGHb2HFREfIQR6THrneqDc20mtJHUIXBdkeQ" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNh6K8kjBSaLwzCmaGHb2HFREfIQR6THrneqDc20mtJHUIXBdkeQ" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNh6K8kjBSaLwzCmaGHb2HFREfIQR6THrneqDc20mtJHUIXBdkeQ" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNh6K8kjBSaLwzCmaGHb2HFREfIQR6THrneqDc20mtJHUIXBdkeQ" alt="">
+    <img class="lastImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNh6K8kjBSaLwzCmaGHb2HFREfIQR6THrneqDc20mtJHUIXBdkeQ"
+        alt="">
+
+
+
+    <script>
+        var img = document.querySelectorAll("img");
+
+
+        for (var i = 0; i < img.length; i++) {
+            img[i].addEventListener('click', function (event) {
+                if (event.target.width !== 300) {
+                    event.stopPropagation();
+                } else {
+                    event.target.classList.add('redBorder');
+                }
+            })
+
+        }
+        document.addEventListener('click', globalLogger)
+
+        function globalLogger(event) {
+            console.log(event.target);
+
+        }
+    </script>
+
+</body>
+
+</html>
