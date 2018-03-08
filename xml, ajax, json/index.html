@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        // ajax:
+        // var request = new XMLHttpRequest();
+        // request.open("GET", "http://www.freegeoip.net/xml/4.2.2.2");
+        // request.send();
+        // request.onload = function (response) {
+        //     if (request.status === 200) {
+        //         var requestDoc = request.responseXML;
+        //         var result = requestDoc.querySelector("CountryName");
+        //         console.log(result.textContent);
+
+
+        //     }
+        // }
+
+
+
+        // json:
+
+        var request = new XMLHttpRequest();
+        request.open("GET", "http://www.freegeoip.net/json/github.com");
+        request.send();
+        request.onload = function (response) {
+            if (request.status === 200) {
+                // var requestDoc = request.responseXML;
+                // var result = requestDoc.querySelector("CountryName");
+                var result = JSON.parse(request.responseText);
+                console.log(result.country_name);
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
